@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Wilton | Componentes Interativos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Botão de alternância de tema -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <header>
+            <h1>Portfólio <span class="developer-name">Wilton</span></h1>
+            <p class="subtitle">Projeto 4: Coleção de Componentes Interativos em JavaScript</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsivo</span>
+                <span class="tech-tag">LocalStorage</span>
+            </div>
+        </header>
+
+        <div class="components-grid">
+            <!-- Contador Interativo -->
+            <div class="component-card">
+                <div class="component-header">
+                    <div class="component-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h2 class="component-title">Contador Interativo</h2>
+                </div>
+                <p class="component-description">Incremente, decremente ou reset o valor.</p>
+                <div class="counter-display" id="counterValue">0</div>
+                <div class="counter-buttons">
+                    <button class="counter-btn" id="decrementBtn">-</button>
+                    <button class="counter-btn counter-reset" id="resetBtn">Resetar</button>
+                    <button class="counter-btn" id="incrementBtn">+</button>
+                </div>
+            </div>
+
+            <!-- Lista de Tarefas -->
+            <div class="component-card">
+                <div class="component-header">
+                    <div class="component-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h2 class="component-title">Lista de Tarefas</h2>
+                </div>
+                <p class="component-description">Adicione, complete ou remova tarefas.</p>
+                <div class="task-input-container">
+                    <input type="text" class="task-input" id="taskInput" placeholder="Digite uma nova tarefa...">
+                    <button class="task-add-btn" id="addTaskBtn">Adicionar</button>
+                </div>
+                <ul class="task-list" id="taskList">
+                    <!-- Tarefas serão inseridas aqui via JavaScript -->
+                </ul>
+            </div>
+
+            <!-- Modal de Login/Informação -->
+            <div class="component-card">
+                <div class="component-header">
+                    <div class="component-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 class="component-title">Modal de Login</h2>
+                </div>
+                <p>Clique no botão abaixo para abrir o modal de login/informação.</p>
+                <button class="open-modal-btn" id="openModalBtn">Abrir Modal</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Projeto desenvolvido por <span class="footer-name">Wilton</span> para portfólio - Componentes interativos com HTML, CSS e JavaScript</p>
+            <p>&copy; <span id="currentYear"></span> - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Login / Informações</h3>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="username">Usuário</label>
+                        <input type="text" class="form-input" id="username" placeholder="Digite seu usuário" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">Senha</label>
+                        <input type="password" class="form-input" id="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
